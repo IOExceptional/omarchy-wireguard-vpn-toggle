@@ -28,7 +28,7 @@ Based on the guide from [Omarchy Discussion #1366](https://github.com/basecamp/o
 Since Omarchy is designed for Arch Linux:
 
 ```bash
-sudo pacman -S wireguard-tools waybar jq
+sudo pacman -S wireguard-tools waybar jq systemd-resolvconf
 ```
 
 ## Installation
@@ -275,6 +275,10 @@ bash -n ~/.config/waybar/scripts/vpn-status.sh
 bash -n ~/.config/waybar/scripts/vpn-toggle.sh
 bash -n ~/.config/waybar/scripts/vpn-select.sh
 ```
+
+### wg-quick: '<conf name>' does not exist
+
+wg-quick is picky with longer names, try shortening the name of the .conf file in `/etc/wireguard`
 
 ## Security Considerations
 
